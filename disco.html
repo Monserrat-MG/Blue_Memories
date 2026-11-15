@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071a32">
+  <meta name="description" content="Tocadiscos vintage con playlist integrada de Spotify.">
+  <title>Blue Memories · Tocadiscos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reproductor.css">
+</head>
+<body class="player-page">
+  <div class="grain" aria-hidden="true"></div>
+  <header class="player-header">
+    <a class="back-link" href="index.html"><span aria-hidden="true">←</span> VOLVER A LA CAJA</a>
+    <div class="header-title"><span class="status-light"></span> BLUE MEMORIES <small>VINYL PLAYER</small></div>
+    <span class="header-edition">SIDE A · 33⅓ RPM</span>
+  </header>
+
+  <main class="player-main">
+    <section class="how-to">
+      <div class="how-icon" aria-hidden="true">i</div>
+      <div>
+        <p class="how-label">INSTRUCCIONES · TOCADISCOS</p>
+        <p>Selecciona una canción desde la playlist de Spotify. El vinilo comenzará a girar cuando Spotify indique que la reproducción está activa. Usa los controles del reproductor para pausar o cambiar de pista.</p>
+      </div>
+      <button class="help-toggle" id="helpToggle" type="button" aria-expanded="false" aria-controls="extraHelp">AYUDA +</button>
+      <div class="extra-help" id="extraHelp" hidden>
+        <strong>¿No comienza a sonar?</strong> Pulsa reproducir dentro de Spotify. Según tu cuenta, región y dispositivo, Spotify puede pedirte iniciar sesión o abrir la aplicación. El sitio necesita conexión a internet para cargar el reproductor.
+      </div>
+    </section>
+
+    <div class="content-grid">
+      <section class="turntable-column" aria-label="Tocadiscos vintage">
+        <div class="section-heading">
+          <span class="eyebrow">EL LADO A</span>
+          <span class="tiny-rule"></span>
+          <span class="eyebrow">33⅓ RPM</span>
+        </div>
+
+        <div class="turntable" id="turntable">
+          <div class="turntable-lid-line"></div>
+          <div class="platter">
+            <div class="platter-rim"></div>
+            <div class="record" id="record">
+              <div class="record-grooves"></div>
+              <div class="record-highlight"></div>
+              <div class="record-label">
+                <img src="etiqueta-vinilo.jpg" alt="Etiqueta personalizada del vinilo con un automóvil rojo al atardecer">
+                <span class="label-hole"></span>
+              </div>
+              <div class="record-spindle"></div>
+            </div>
+            <div class="spindle-pin"></div>
+          </div>
+
+          <div class="tonearm" id="tonearm" aria-hidden="true">
+            <div class="arm-base"></div>
+            <div class="arm-pivot"></div>
+            <div class="arm-shaft"></div>
+            <div class="arm-head"></div>
+            <div class="arm-needle"></div>
+          </div>
+
+          <div class="speed-switch"><span>33</span><span>45</span><i></i></div>
+          <div class="power-light" id="powerLight"></div>
+          <div class="brand-plate">BLUE MEMORIES <small>STEREO TURNTABLE</small></div>
+          <div class="front-controls">
+            <span class="control-knob"></span><span class="control-label">POWER</span>
+            <span class="control-knob silver"></span><span class="control-label">SPEED</span>
+            <span class="control-slot"></span>
+          </div>
+        </div>
+
+        <div class="now-playing">
+          <div class="now-indicator"><span class="equalizer" id="equalizer"><i></i><i></i><i></i><i></i></span><span id="playState">EN ESPERA</span></div>
+          <p class="now-title" id="nowTitle">Selecciona una canción</p>
+          <p class="now-subtitle" id="nowSubtitle">Tu música aparecerá aquí</p>
+        </div>
+      </section>
+
+      <aside class="playlist-column">
+        <div class="playlist-heading">
+          <div>
+            <p class="eyebrow">TU COLECCIÓN</p>
+            <h2>La playlist</h2>
+          </div>
+          <span class="track-count">SPOTIFY<br><b>PLAYLIST</b></span>
+        </div>
+        <p class="playlist-intro">Elige una pista directamente desde el reproductor. La lista original se conserva en Spotify.</p>
+        <div class="spotify-frame">
+          <div id="spotifyEmbed" class="spotify-embed">
+            <iframe
+              title="Playlist de Spotify"
+              src="https://open.spotify.com/embed/playlist/5lEkXYvgZngoYz2B4R0wLY?utm_source=generator&theme=0"
+              width="100%" height="352" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
+        </div>
+        <a class="spotify-open" href="https://open.spotify.com/playlist/5lEkXYvgZngoYz2B4R0wLY" target="_blank" rel="noopener noreferrer">
+          ABRIR PLAYLIST EN SPOTIFY <span aria-hidden="true">↗</span>
+        </a>
+        <p class="spotify-note">La reproducción y disponibilidad de canciones dependen de Spotify y de la cuenta del visitante.</p>
+      </aside>
+    </div>
+
+    <section class="bottom-note">
+      <span class="bottom-star">✳</span>
+      <p>BAJA LA AGUJA, SUBE EL VOLUMEN Y DISFRUTA EL VIAJE.</p>
+      <span class="bottom-star">✳</span>
+    </section>
+  </main>
+
+  <footer class="player-footer">
+    <span>BLUE MEMORIES · PERSONAL VINYL ARCHIVE</span>
+    <a href="index.html">REGRESAR A LA PORTADA ↑</a>
+  </footer>
+
+  <script src="reproductor.js"></script>
+</body>
+</html>
